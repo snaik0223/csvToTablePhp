@@ -6,7 +6,7 @@
  * Time: 6:39 AM
  */
 
-echo 'Hello welcome to my project! <br>';
+echo '';
 
 $data = csvReader::getData('sample.csv');
 $htmlTable = tableMaker::makeTable($data);
@@ -49,10 +49,18 @@ class tableMaker{
         $headerData = array_shift($data);
         $htmlTable.= htmlMaker::makeHeader($headerData);
 
+
+        $htmlTable.= '<tbody>';
+
+        foreach($data as $value){
+            $htmlTable.= htmlMaker::makeRow($value);
+        }
+
+        $htmlTable.= '</tbody>';
         $htmlTable.= '</table>';
         return($htmlTable);
-    }
 
+    }
 
 }
 
@@ -70,4 +78,18 @@ class htmlMaker{
         </thead>';
         return ($htmlHeader);
     }
+
+    public static function makeRow($rowData){
+
+        $htmlRow = '<tr>';
+
+        foreach ($rowData as $value){
+            $htmlRow.= '<td>'.$value.'</td>';
+        }
+
+        $htmlRow.= '</tr>';
+
+        return($htmlRow);
+    }
+
 }
