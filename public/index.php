@@ -12,8 +12,24 @@ echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 ';
 
-$data = csvReader::getData('sample.csv');
-$htmlTable = tableMaker::makeTable($data);
+main::start('sample.csv');
+
+/*
+ * The main class is the control of the code.
+ * It calls the remaining classes for the following functions:
+ * csvReader class : contains the getData function to extract the data from the csv file
+ * tableMaker class : contains the makeTable function which constructs the html required to render a table
+ * htmlMaker class : this class contains functions makeHeader and makeRow to make these components of an html table
+ */
+
+class main{
+    public static function start($filename){
+        $data = csvReader::getData($filename);
+        $htmlTable = tableMaker::makeTable($data);
+        echo $htmlTable;
+    }
+
+}
 
 
 class csvReader{
@@ -36,14 +52,6 @@ class csvReader{
 }
 
 
-echo $htmlTable.'<br>';
-
-/*foreach ($data as $value){
-      foreach ($value as $innerValue){
-    echo $innerValue.'<br>';
-    }
-}*/
-
 class tableMaker{
 
     public static function makeTable($data){
@@ -57,7 +65,7 @@ class tableMaker{
         $htmlTable.= '<tbody>';
 
         foreach($data as $value){
-            $htmlTable.= htmlMaker::makeRow($value);
+            $htmlTable.= htmlMaker::makeRows($value);
         }
 
         $htmlTable.= '</tbody>';
@@ -68,8 +76,10 @@ class tableMaker{
 
 }
 
+
 class htmlMaker{
 
+    // create html for a table header
     public static function makeHeader($headerData)
     {
         $htmlHeader = '<thead>
@@ -83,12 +93,13 @@ class htmlMaker{
         return ($htmlHeader);
     }
 
-    public static function makeRow($rowData){
+    // create html for rows in a table
+    public static function makeRows($rowData){
 
         $htmlRow = '<tr>';
 
         foreach ($rowData as $value){
-            $htmlRow.= '<td>'.$value.'</td>';
+            $htmlRow.= '<td style="padding: 20px;">'.$value.'</td>';
         }
 
         $htmlRow.= '</tr>';
