@@ -10,34 +10,33 @@ echo 'Hello welcome to my project!';
 
 
 class csvReader{
-    private $filename;
 
-    function getFilename(){
-        return($this->filename);
-    }
+   //This class is meant for representing CSV files
 
-    function __construct($value){
-        $this->filename = $value;
-    }
-
-
-    public static function dataArray(){
+    public static function getData($filename){
         $data = array();
+        $file = fopen($filename,'r');
 
-        $file = fopen('sample.csv','r');
 
-        $counter = 0;
         while (($line = fgetcsv($file)) !== FALSE) {
-            //do nothing
             $data[] = $line;
-            $counter++;
-            echo $counter.'<br>';
         }
         fclose($file);
 
+        return($data);
     }
 
 }
 
-$readerObject = new csvReader('sample.csv');
-csvReader::dataArray();
+
+
+$data = csvReader::getData('sample.csv');
+
+
+foreach ($data as $value){
+      foreach ($value as $innerValue){
+    echo $innerValue.'<br>';
+    }
+}
+
+
