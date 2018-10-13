@@ -12,7 +12,7 @@ echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 ';
 
-main::start('sample.csv');
+main::start('sample2.csv');
 
 /*
  * The main class is the control of the code.
@@ -99,7 +99,7 @@ class htmlMaker{
         $htmlRow = '<tr>';
 
         foreach ($rowData as $value){
-            $htmlRow.= '<td style="padding: 20px;">'.$value.'</td>';
+            $htmlRow.= '<td>'.$value.'</td>';
         }
 
         $htmlRow.= '</tr>';

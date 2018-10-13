@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15a9a4a6-2805-49d4-8c6f-c5cbf72a0100" name="Default Changelist" comment="" />
+    <list default="true" id="15a9a4a6-2805-49d4-8c6f-c5cbf72a0100" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/sample2.csv" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,23 +20,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="2" />
           <entry key="php" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSV" value="2" />
           <entry key="PHP" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2660" />
+          <entry key="csv" value="57" />
+          <entry key="php" value="2661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSV" value="57" />
           <entry key="HTML" value="9" />
-          <entry key="PHP" value="2651" />
+          <entry key="PHP" value="2652" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions" />
@@ -48,16 +54,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="95" column="38" lean-forward="true" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-519">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/sample2.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/sample.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -68,6 +81,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/public/sample.csv" />
+        <option value="$PROJECT_DIR$/public/sample2.csv" />
         <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
@@ -152,25 +167,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539427072373</updated>
-      <workItem from="1539427073931" duration="11894000" />
+      <workItem from="1539427073931" duration="12346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11894000" />
+    <option name="totallyTimeSpent" value="12346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-623" y="-1669" width="1504" height="1669" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.249658" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.249658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" weight="0.32974002" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32974002" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32974002" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -192,15 +207,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/sample.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="95" column="38" lean-forward="true" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-519">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sample2.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>
